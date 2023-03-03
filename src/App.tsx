@@ -1,8 +1,7 @@
 import './App.css'
 import Button from './components/Button/Button'
 
-type Props = {}
-const App = (props: Props) => {
+const App = () => {
     return (
         <div className="app">
             <h1>Перше завдання:</h1>

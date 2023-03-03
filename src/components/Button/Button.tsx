@@ -1,7 +1,6 @@
 import { useState } from 'react'
 
-type Props = {}
-const Button = ({}: Props) => {
+const Button = () => {
     const [count, setCount] = useState<number>(0)
     const incrementCount = () => {
         setCount((prevState) => prevState + 1)
@@ -11,8 +10,10 @@ const Button = ({}: Props) => {
     }
     return (
         <div style={{ marginBottom: '10px' }}>
-            <button onClick={incrementCount}>Change count {count}</button>
-            <button onClick={resetCount}>Reset</button>
+            <button onClick={() => incrementCount()}>
+                Change count {count}
+            </button>
+            <button onClick={() => resetCount()}>Reset</button>
         </div>
     )
 }
